@@ -7,9 +7,9 @@ https://datadryad.org/stash/dataset/doi:10.5061/dryad.8rr0498
 -
 
 # R-Ladies project 
-Begin january 2021 I started to attend the project R-Ladies. Due the first meeting my group decided to pick datasets from TidyTuesday.
-The reason I chose this dataset is because I am interested in the interaction between biota and the environment. During the process our group decided to follow 2 books : 
--
--
+Begin january 2021 I started to attend the project R-Ladies. Due the first meeting my group decided to pick datasets from TidyTuesday.The reason I chose this dataset is because I am interested in the interaction between biota and the environment. During the process our group decided to follow 2 books : 
+.
+.
 
+# Focus 
 My main focus was learning to explore/wrangle and visualize the data in a efficient way.
