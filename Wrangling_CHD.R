@@ -94,3 +94,66 @@ CHD$Locality %>% as.factor()
 LL$Date %>% as.factor()
 LL$Light_Score %>% as.factor()
 
+
+table(CHD$Genus)
+table(CHD$Species)
+table(CHD$Date)
+table(CHD$Locality)
+
+
+table(LL$Date)
+table(LL$Light_Score)
+
+CHD %>%
+  #select(starts_with(CHD)) %>%
+  names() %T>%
+  print() ->
+  vnames
+
+target <- "Genus"
+CHD[[target]] %<>% as.factor()
+CHD[target] %>% table()
+
+target <- "Species"
+CHD[[target]] %<>% as.factor()
+CHD[target] %>% table()
+
+target <- "Date"
+CHD[[target]] %<>% as.factor()
+CHD[target] %>% table()
+
+target <- "Locality"
+CHD[[target]] %<>% as.factor()
+CHD[target] %>% table()
+
+target <- "Light_Score"
+LL[[target]] %<>% as.factor()
+LL[target] %>% table()
+
+target <- "Date"
+LL[[target]] %<>% as.factor()
+LL[target] %>% table()
+
+CHD %>%
+  names() %T>%
+  print()->
+  vars
+
+id <- c("Date","Locality")
+id %>%
+  union(if (exists("risk")) risk) %>%
+  print() ->
+  ignore
+
+count_unique <- function(x) {
+  x %>% unique() %>% length()
+}
+
+
+ods <- CHD
+CHD %<>% filter(Locality=="MP")
+CHD[vars] %>%
+  sapply(count_unique) %>%
+  equals(nrow(CHD)) %>%
+  which() %>%
+  names()
