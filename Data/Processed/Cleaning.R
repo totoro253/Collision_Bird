@@ -60,4 +60,8 @@ cat_speciesFlight$levels$Var1
 #Exploring which species using flight calls
 t_speciesFlight <- table (bird_collisions$species,bird_collisions$flight_call)
 barplot(t_speciesFlight)
+heatmap(t_speciesFlight)
+heatmap(t_speciesFlight)
 
+specflight <- data.matrix(t_speciesFlight, rownames.force = TRUE)
+heatmap(specflight, main = "Species and flight calls behaviour")
