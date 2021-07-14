@@ -1,0 +1,11 @@
+14-7-21
+
+Currently I am in the fase of exploring the data. Just started after a long period not coding in R. 
+Short analyzed NA's . As far as I explored there are no NA's. There is a duplicate, 
+________________________________________________________________
+heatmaply::heatmaply(t_speciesFlight)
+Error in `levels<-`(`*tmp*`, value = as.character(levels)) : 
+  factor level [82] is duplicated
+_________________________________________________________________
+explored while trying to make a heatmap.
+The explore_attempt1 PNG was a scratch and inspired me to think about a heatmap. This plot is not a plot that I used although in R it was somehow interactive yet I didn't though it was neccesary to use the same type of plot. A heatmap was in my opinion also a good way to show the data.Tried a heatmap because there are a lot of species and as far as I know this is the most suitable way to show the flight call behaviour of species in general. Later on I might add the dates to get a much better understanding in changing behaviour during a certain period.

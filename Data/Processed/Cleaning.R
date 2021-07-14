@@ -64,4 +64,4 @@ heatmap(t_speciesFlight)
 heatmap(t_speciesFlight)
 
 specflight <- data.matrix(t_speciesFlight, rownames.force = TRUE)
-heatmap(specflight, main = "Species and flight calls behaviour")
+heatmap(specflight, col=blues9,main = "Species and flight calls behaviour" )
