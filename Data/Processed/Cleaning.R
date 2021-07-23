@@ -65,3 +65,7 @@ heatmap(t_speciesFlight)
 
 specflight <- data.matrix(t_speciesFlight, rownames.force = TRUE)
 heatmap(specflight, col=blues9,main = "Species and flight calls behaviour" )
+
+ggplot(mp_light, aes(x=mp_light$date,color=mp_light$light_score)) + geom_density() #Density of light score compared to date
+ggplot(bird_collisions, aes(x=bird_collisions$date,color=bird_collisions$flight_call)) + geom_density() # Density flight call compared to date
+
