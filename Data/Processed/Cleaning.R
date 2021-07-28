@@ -69,3 +69,9 @@ heatmap(specflight, col=blues9,main = "Species and flight calls behaviour" )
 ggplot(mp_light, aes(x=mp_light$date,color=mp_light$light_score)) + geom_density() #Density of light score compared to date
 ggplot(bird_collisions, aes(x=bird_collisions$date,color=bird_collisions$flight_call)) + geom_density() # Density flight call compared to date
 
+#Plot used to get a closer look comparing species with date
+date_species <- ggplot(bird_collisions, aes(x=dates, y=species)) + geom_point(shape=2)
+date_species
+
+date_species_line <- ggplot(bird_collisions, aes(x=dates, y=species)) + geom_line(shape=1)
+date_species_line
