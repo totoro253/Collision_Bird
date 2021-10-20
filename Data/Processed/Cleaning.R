@@ -10,6 +10,10 @@ library(tibble)
 bird_collisions <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-30/bird_collisions.csv")
 mp_light <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-30/mp_light.csv")
 
+readr::spec(bird_collisions)
+readr::spec(mp_light)
+
+
 bird_collisions <- bird_collisions %>% janitor::clean_names()
 mp_light<- mp_light %>% janitor::clean_names()
 
@@ -75,3 +79,12 @@ date_species
 
 date_species_line <- ggplot(bird_collisions, aes(x=dates, y=species)) + geom_line(shape=1)
 date_species_line
+
+
+#ERROR -inf/NaN
+describe(bird_collisions[1:8])
+describe(mp_light[1:2])
+
+
+
+
